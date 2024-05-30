@@ -46,8 +46,13 @@ public class DBConnection {
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				data = new DbTable();
-
 				// 데이터를 매핑하시오.
+				data.set번호(rs.getInt("번호"));
+				data.set이름(rs.getString("이름"));
+				data.set성별(rs.getString("성별"));
+				data.set특징(rs.getString("특징"));
+				data.set해적단(rs.getString("해적단"));
+				data.set역활(rs.getString("역활"));
 
 				list.add(data);
 			}
